@@ -1,5 +1,32 @@
 [gd_scene format=3 uid="uid://d22jawmr5833r"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rd3vj"]
+size = Vector2(1152, 648)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rd3vj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rd3vj"]
+normal = Vector2(0, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2q6dc"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2q6dc"]
+
 [node name="Level" type="Area2D" unique_id=717392464]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=507974239]
+[node name="LevelArea" type="CollisionShape2D" parent="." unique_id=507974239]
+shape = SubResource("RectangleShape2D_rd3vj")
+
+[node name="Ceiling" type="StaticBody2D" parent="." unique_id=553639166]
+position = Vector2(0, -324)
+physics_material_override = SubResource("PhysicsMaterial_rd3vj")
+
+[node name="CeilingCollision" type="CollisionShape2D" parent="Ceiling" unique_id=884849265]
+shape = SubResource("WorldBoundaryShape2D_rd3vj")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1049137185]
+position = Vector2(0, 324)
+physics_material_override = SubResource("PhysicsMaterial_2q6dc")
+
+[node name="FloorCollision" type="CollisionShape2D" parent="Floor" unique_id=1161676964]
+shape = SubResource("WorldBoundaryShape2D_2q6dc")
