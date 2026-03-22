@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dj8q4dwasyf05"]
 
 [ext_resource type="PackedScene" uid="uid://d22jawmr5833r" path="res://scenes/level.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://60s1p5ludwhm" path="res://scenes/test_ball.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://e1m8wcpynwlx" path="res://scenes/paddle.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1934257106]
 
 [node name="Level" parent="." unique_id=717392464 instance=ExtResource("1_uwrxv")]
 position = Vector2(576, 324)
 
-[node name="TestBall" parent="." unique_id=710430380 instance=ExtResource("2_yqjtg")]
-position = Vector2(565, 208)
+[node name="Player" parent="." unique_id=1833255128 instance=ExtResource("2_yqjtg")]
+position = Vector2(40, 265)
+
+[node name="Computer" parent="." unique_id=1304982822 instance=ExtResource("2_yqjtg")]
+position = Vector2(1079, 265)
+rotation = 3.1415927
