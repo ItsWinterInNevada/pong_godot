@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://e1m8wcpynwlx"]
+
+[node name="Paddle" type="CharacterBody2D" unique_id=1833255128]
