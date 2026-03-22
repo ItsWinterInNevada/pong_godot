@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://d22jawmr5833r" path="res://scenes/level.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://e1m8wcpynwlx" path="res://scenes/paddle.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://cdrtfq0w1w5q3" path="res://scripts/player.gd" id="3_lbhrr"]
+[ext_resource type="Script" uid="uid://dw0ofe6c1uevf" path="res://scripts/computer.gd" id="4_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1934257106]
 
@@ -10,7 +12,9 @@ position = Vector2(576, 324)
 
 [node name="Player" parent="." unique_id=1833255128 instance=ExtResource("2_yqjtg")]
 position = Vector2(40, 265)
+script = ExtResource("3_lbhrr")
 
 [node name="Computer" parent="." unique_id=1304982822 instance=ExtResource("2_yqjtg")]
 position = Vector2(1079, 265)
 rotation = 3.1415927
+script = ExtResource("4_iywne")
