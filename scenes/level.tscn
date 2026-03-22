@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d22jawmr5833r"]
 
+[ext_resource type="Texture2D" uid="uid://do7fcbdgntvtm" path="res://assets/Board.png" id="1_2q6dc"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd3vj"]
 size = Vector2(1152, 648)
 
@@ -30,3 +32,8 @@ physics_material_override = SubResource("PhysicsMaterial_2q6dc")
 
 [node name="FloorCollision" type="CollisionShape2D" parent="Floor" unique_id=1161676964]
 shape = SubResource("WorldBoundaryShape2D_2q6dc")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1070213864]
+position = Vector2(1.21593475e-05, -0.49997687)
+scale = Vector2(1.4364091, 1.4263737)
+texture = ExtResource("1_2q6dc")

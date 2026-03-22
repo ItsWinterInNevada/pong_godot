@@ -12,13 +12,13 @@
 position = Vector2(576, 324)
 
 [node name="Player" parent="." unique_id=1833255128 instance=ExtResource("2_yqjtg")]
-position = Vector2(40, 265)
+position = Vector2(20, 324)
 script = ExtResource("3_lbhrr")
 
 [node name="Computer" parent="." unique_id=1304982822 instance=ExtResource("2_yqjtg")]
-position = Vector2(1079, 265)
+position = Vector2(1132, 324)
 rotation = 3.1415927
 script = ExtResource("4_iywne")
 
 [node name="Ball" parent="." unique_id=865308976 instance=ExtResource("5_iywne")]
-position = Vector2(570, 273)
+position = Vector2(576, 324)
