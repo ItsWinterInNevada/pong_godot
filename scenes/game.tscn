@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dj8q4dwasyf05"]
 
+[ext_resource type="Script" uid="uid://cafbwoaur0rx8" path="res://scripts/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d22jawmr5833r" path="res://scenes/level.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://e1m8wcpynwlx" path="res://scenes/paddle.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cdrtfq0w1w5q3" path="res://scripts/player.gd" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://dw0ofe6c1uevf" path="res://scripts/computer.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://c5a6lhodh1sak" path="res://scenes/ball.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://bsqg7sfmbl2da" path="res://scripts/player_score.gd" id="7_gee14"]
+[ext_resource type="Script" uid="uid://cyswq1lm18vkn" path="res://scripts/computer_score.gd" id="8_0tnpc"]
 
 [node name="Game" type="Node2D" unique_id=1934257106]
+script = ExtResource("1_p57ef")
 
 [node name="Level" parent="." unique_id=717392464 instance=ExtResource("1_uwrxv")]
 position = Vector2(576, 324)
@@ -22,3 +26,19 @@ script = ExtResource("4_iywne")
 
 [node name="Ball" parent="." unique_id=865308976 instance=ExtResource("5_iywne")]
 position = Vector2(576, 324)
+
+[node name="PlayerScore" type="Label" parent="." unique_id=1621050263]
+offset_left = 288.0
+offset_top = 20.0
+offset_right = 328.0
+offset_bottom = 43.0
+script = ExtResource("7_gee14")
+
+[node name="ComputerScore" type="Label" parent="." unique_id=1893478932]
+offset_left = 864.0
+offset_top = 20.0
+offset_right = 904.0
+offset_bottom = 43.0
+script = ExtResource("8_0tnpc")
+
+[connection signal="body_exited" from="Level" to="." method="_on_level_body_exited"]
